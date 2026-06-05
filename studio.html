@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+     
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            font-family: sans-serif;
+        }
+
+        .brand-logo {
+            color: indigo;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li { 
+            margin-left: 30px; 
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: lightblue;
+        }
+
+        
+        .hero {
+            height: 500px;
+            background-image: linear-gradient(rgba(236, 234, 234, 0.7), rgba(87, 79, 79, 0.7)), url('https://plus.unsplash.com/premium_photo-1714618939758-84f1dd5e229c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dW5pcXVlJTIwc3R1ZGlvJTIwaW1hZ2VzfGVufDB8fDB8fHww');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: indigo;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-family: 'algerian', serif;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            color: white;
+            background-color: darkblue;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: lightblue;
+            color: black;
+        }
+
+        
+        .services-header {
+            text-align: center;
+            padding: 40px 0 10px 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .services-header h2 {
+            font-size: 36px;
+            color: black;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .services-header p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        
+        .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px; 
+            padding: 20px 40px 60px 40px; 
+            font-family: sans-serif;
+        }
+
+        .service-box {
+            background-color: #f8f9fa; 
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+            max-width: 350px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+        }
+
+        .service-box h3 {
+            font-size: 20px;
+            font-weight: bold;  
+            margin: 15px 0;
+            color: black;
+            padding: 10px;
+        }
+
+        .service-box p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #6c757d;
+        }
+        
+        .service-box i {
+            font-size: 40px;
+            background-color: #ffc107;
+            color: white;
+            padding: 25px;
+            border-radius: 50%;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="brand-logo">Start Bootstrap</h1>
+        <nav>
+            <ul>
+                <li><a href="">Services</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Team</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Welcome To Our Studio!</h1>
+        <h2>IT'S NICE TO MEET YOU</h2>
+        <a href="" class="btn">Tell Me More</a>
+    </section>
+    <section class="services-header">
+        <h2>Services</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </section>
+    <section class="services-container">
+        <div class="service-box">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h3>E-Commerce</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto vitae ducimus eum mollitia vero tempore alias, illo quod ea accusantium?</p>
+        </div>
+
+        <div class="service-box">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h3>Responsive Design</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptas odit libero natus velit veritatis molestias, cumque impedit ducimus beatae.</p>
+        </div>
+
+        <div class="service-box">
+            <i class="fa-solid fa-lock"></i>
+            <h3>Web Security</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis molestiae nobis ipsam vel voluptas quia, commodi et iusto laudantium illo?</p>
+        </div>
+    </section>
+
+</body>
+</html>
