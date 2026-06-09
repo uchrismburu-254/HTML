@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Website - Services</title>
+    <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">Our Services</h1>
+        <p style="text-align: center;">Master full stack development, Python programming, Data Science, and Cybersecurity at Kenya's most experienced coding school.</p>
+    </header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="services.html" class="active">Services</a></li>
+            </ul>
+        </nav>
+    <main>
+        <section class="services-container">
+            <div class="services-image">
+                <div class="image-controls">
+                    <button id="zoom-out" aria-label="Zoom out">−</button>
+                    <input id="zoom-range" type="range" min="200" max="900" value="480">
+                    <button id="zoom-in" aria-label="Zoom in">+</button>
+                </div>
+                <img id="service-image" src="assets/images/school.jpg" alt="School image" style="width:480px">
+            </div>
+            <div class="services-list">
+                <ul>
+                    <li class="service-item">
+                        <span class="icon icon-brand" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <div class="service-content">
+                            <h3>Brand Strategy</h3>
+                            <p>We help craft a memorable brand identity and messaging.</p>
+                        </div>
+                    </li>
+                    <li class="service-item">
+                        <span class="icon icon-dev" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 16L4 12L8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 16L20 12L16 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 20H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <div class="service-content">
+                            <h3>Technical Development</h3>
+                            <p>Full-stack development services for web and mobile platforms.</p>
+                        </div>
+                    </li>
+                    <li class="service-item">
+                        <span class="icon icon-analytics" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 17V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7 17V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17 17V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <div class="service-content">
+                            <h3>Growth Analytics</h3>
+                            <p>Data-driven insights to accelerate growth and improve outcomes.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <script>
+        (function(){
+            const img = document.getElementById('service-image');
+            const range = document.getElementById('zoom-range');
+            const btnIn = document.getElementById('zoom-in');
+            const btnOut = document.getElementById('zoom-out');
+
+            function setWidth(px){
+                px = Math.max(200, Math.min(900, px));
+                img.style.width = px + 'px';
+                range.value = px;
+            }
+
+            range.addEventListener('input', (e)=> setWidth(e.target.value));
+            btnIn.addEventListener('click', ()=> setWidth(parseInt(range.value)+40));
+            btnOut.addEventListener('click', ()=> setWidth(parseInt(range.value)-40));
+        })();
+    </script>
+    
+</body>
+</html>
